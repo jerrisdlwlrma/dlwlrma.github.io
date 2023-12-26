@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Rubik1;
+    src: url(fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family:LoraBoldItalic ;
+    src: url(fonts/Lora-BoldItalic.ttf);
+}
+
+body{
+    background-color: rgb(240, 233, 197);
+}
+h1{
+    font-style: oblique;
+    border-bottom: 3px groove lightskyblue
+}
+
+#smol{
+    font-family: Rubik1;
+}
+
+#Ryujin{
+    font-family: LoraBoldItalic;
+    width:200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 4px black;
+}
+
+h2{
+    border-style:solid;
+    border-width: 3px;
+    border-color:burlywood;
+    border-radius:10px;
+}
