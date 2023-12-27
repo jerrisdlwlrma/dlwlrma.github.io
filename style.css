@@ -1,36 +1,75 @@
-@font-face {
-    font-family: Rubik1;
-    src: url(fonts/Rubik-VariableFont_wght.ttf);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/aes1.jpg);
+    background-position: center;
+    background-size: cover;
+    position:relative;
 }
 
-@font-face {
-    font-family:LoraBoldItalic ;
-    src: url(fonts/Lora-BoldItalic.ttf);
+nav{
+    display: flex;
+    padding: 2% 6%;
+    align-items: center;
+    justify-content: space-between;
 }
 
-body{
-    background-color: rgb(240, 233, 197);
-}
-h1{
-    font-style: oblique;
-    border-bottom: 3px groove lightskyblue
+nav img{
+    width: 200px;
 }
 
-#smol{
-    font-family: Rubik1;
+.navlinks{
+    flex: 1;
+    text-align: right;
 }
 
-#Ryujin{
-    font-family: LoraBoldItalic;
-    width:200px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 4px black;
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px 12px;
+    position: relative;
+}
+.navlinks ul li a{
+    text-decoration: none;
+    color:#F6F4EB;
+    font-size: 15px;
 }
 
-h2{
-    border-style:solid;
-    border-width: 3px;
-    border-color:burlywood;
-    border-radius:10px;
+.navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #91C8E4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after{
+    width: 100%
+}
+
+.textbox{
+    width: 90%;
+    color: #F6F4EB;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 100px;
+}
+
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 30px;
+    color: white;
 }
