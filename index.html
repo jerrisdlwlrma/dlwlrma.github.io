@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Nanum+Pen+Script&family=Rubik:wght@300;400;500;600;700;800;900&family=Single+Day&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4feed905e.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="images/iu18.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <div class="cursor-outline" data-cursor-outline></div>
@@ -18,26 +19,26 @@
     <!--Header-->
     <section class="header">
         <nav>
-            <a href="index.html"><img src="images/logo5ed.png" alt="IU"></a>
-            <div class="navlinks" id="navlinks">
+            <a href="index.html"><img src="images/logo5ed.png" id="logo"  alt="logo"></a>
+            <div class="navlinks" id="navlinks">    
                 <i class="fa-solid fa-xmark fa-sm" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="aboutme.html">ABOUT ME</a></li>
                     <li><a href="groups.html">GROUPS</a></li>
                     <li><a href="soloists.html">SOLOISTS</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=z75GlxXEfZk">STREAM</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=z75GlxXEfZk" target="blank">STREAM</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
-
+    
         <div class="container">
-            <div class="name1">
+            <div class="name1" id="title">
                 <h1>JERRIC</h1>
             </div> 
             <div class="name2">
-                <h1>just all about me</h1>
+                <h1>is <span></span></h1>
             </div>
             <div class="name4">
                 <h1>favourite albums</h1>
@@ -173,5 +174,46 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 </script>
 
+    <!--Javascript for Typing-->
+
+<script>
+    const dynamicText = document.querySelector("h1 span");
+const words = ["charismatic", "intelligent", "unique", "delirious", "ambitious", "crazy", "mature", "conscientious"];
+// Variables to track the position and deletion status of the word
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typeEffect = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+    dynamicText.classList.add("stop-blinking");
+    if (!isDeleting && charIndex < currentWord.length) {
+        // If condition is true, type the next character
+        charIndex++;
+        setTimeout(typeEffect, 200);
+    } else if (isDeleting && charIndex > 0) {
+        // If condition is true, remove the previous character
+        charIndex--;
+        setTimeout(typeEffect, 100);
+    } else {
+        // If word is deleted then switch to the next word
+        isDeleting = !isDeleting;
+        dynamicText.classList.remove("stop-blinking");
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1200);
+    }
+}
+typeEffect();
+</script>]
+
+
+
+<script> ScrollReveal({ reset: false, duration: 2500 , delay:400, distance: '60px' })
+ScrollReveal().reveal('.navlinks', { delay: 100, origin: 'top', enter: 'top'});
+ScrollReveal().reveal('#logo', { delay: 100, origin: 'top' });
+ScrollReveal().reveal('#image-track', { delay: 300, origin: 'right' });
+ScrollReveal().reveal('.gallery', { delay: 100, origin: 'bottom', scale: '0.8' });
+</script>
 </body>
 </html>
