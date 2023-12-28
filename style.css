@@ -6,7 +6,8 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Single Day', cursive;
 font-family: 'Lora', serif;
 overflow-x: hidden;
-font-family: 'GeneralSans'
+font-family: 'GeneralSans';
+box-sizing:border-box
 }
 @font-face {
     font-family: 'Kyiv Sans';
@@ -56,7 +57,7 @@ font-family: 'GeneralSans'
     left:0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index:1;
+    z-index:220;
     pointer-events: none;
 }
 
@@ -90,23 +91,41 @@ nav{
     display: flex;
     padding: 2%;
     justify-content: space-between;
+    background-color: black;
+    width:100%;
+    height:21px;
+    position:fixed; 
+    top:0;
+    left:0;
+    align-items: center;
+    z-index: 22;
+    overflow: hidden;
 }
+
 
 nav img{
     position:absolute;
     object-fit: cover;
     width:50px;
     margin-left: 20px;
-    translate: 0px 20px;
+    translate: -12px -12px; 
+}
+
+nav .navlinks ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navlinks{
     text-align: right;
+    overflow-y: hidden;
 }
 
 .navlinks ul li{
     list-style: none;
-    display: inline-block;
+    display: inline-block   ;
     padding: 8px 20px;
     position: relative;
     margin-right: 20px;
@@ -117,6 +136,7 @@ nav img{
     font-size: 15px;
     font-family: 'Cabinet Grotesk';
     font-weight:500;
+    position: relative;
 }
 
 .navlinks ul li::after{
@@ -146,7 +166,7 @@ nav img{
     gap: 4vmin;
     position: absolute;
     left: 0%;
-    top: 50%;
+    top: 63%;
     transform: translate(0%, -80%); 
     user-select: none; 
     display: flex;
@@ -200,6 +220,39 @@ nav img{
     font-family: 'GeneralSans';
     font-weight: 500;
     font-size: 11.089rem;
+    transition: 1s;
+    animation: slideInRight 2.5s ease;
+}
+
+@keyframes slideInRight {
+    from{
+        transform: translateX(2000px)
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-500px)
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.name1 h1:hover{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    z-index:1;
+    position:absolute;
+    top: 590px;
+    left: 50%;
+    font-family: 'GeneralSans';
+    font-weight: 100;
+    font-size: 11.089rem;
 }
 
 .name2 h1{
@@ -208,11 +261,31 @@ nav img{
     z-index:1;
     position:absolute;
     top: 790px;
-    left: 1390px;
+    left: 1480px;
     font-family: 'Cabinet Grotesk';
     font-weight: 150;
     font-size: 1.618rem;
+    overflow-y: hidden;
+    animation: slideInRight 2.5s ease;
 }
+
+.name2 h1 span{
+    position: relative;
+    color: #ffffff;
+    font-size: 2.618rem;
+}
+
+.name2 h1 span::before{
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    height:30px;
+    width: 2px;
+    background: #ffffff;
+    transform: translate(-45%);
+}
+
 
 .name4 h1{
     color: rgba(255, 255, 255, 0.8);
@@ -224,6 +297,7 @@ nav img{
     font-size: 1rem;
     top:145px;
     left: 31px;
+    animation: slideInLeft 2.5s ease;
 }
 
 .name5 h1{
@@ -234,8 +308,9 @@ nav img{
     font-family: 'Cabinet Grotesk';
     font-weight: 150;
     font-size: 1rem;
-    bottom:340px;
+    bottom:220px;
     right: 15px;
+    animation: slideInRight 2.5s ease;
 }
 
 
@@ -319,7 +394,9 @@ nav img{
 .aboutme h1{
     font-size:36px;
     font-weight:600;
-    color: black
+    color: black;
+    font-family: 'GeneralSans';
+    font-display: uppercase;
 }
 
 .aboutme p{
@@ -430,13 +507,15 @@ nav img{
 /*----- Top 4 -----*/
 
 .top4 h1{
-    font-size:50px;
-    font-weight:600;
+    font-size: 4.236rem;
+    font-weight: 500;
     color: black;
-    width: 80%;
-    margin: auto;
+    width: 100%;
     text-align: center;
     padding-top: 100px;
+    font-family: 'GeneralSans';
+    text-transform: uppercase;
+    text-wrap: nowrap;
 }
 
 
