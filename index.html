@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Nanum+Pen+Script&family=Rubik:wght@300;400;500;600;700;800;900&family=Single+Day&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4feed905e.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="images/iu18.png">
+    <link rel="icon" type="image/png" href="images/logofinal2.png">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
@@ -21,16 +21,15 @@
         <nav>
             <a href="index.html"><img src="images/logo5ed.png" id="logo"  alt="logo"></a>
             <div class="navlinks" id="navlinks">    
-                <i class="fa-solid fa-xmark fa-sm" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="aboutme.html">ABOUT ME</a></li>
-                    <li><a href="groups.html">GROUPS</a></li>
-                    <li><a href="soloists.html">SOLOISTS</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=z75GlxXEfZk" target="blank">STREAM</a></li>
+                    <li><a href="music.html">MUSIC</a></li>
+                    <li><a href=photoalbum.html>PHOTOALBUM</a></li>
+                    <li><a href="contactme.html" class="btn">CONTACT ME</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=z75GlxXEfZk" target="blank" class="btn">STREAM</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
     
         <div class="container">
@@ -64,14 +63,18 @@
                 <div class="albumhp">
                     <div class="row">
                         <div class="col-4">
-                            <img class="image2"img src="images/utopia.png" draggable="false">
-                            <img class="image3"img src="images/sejeong2.jpg" draggable="false">
-                            <img class="image4"img src="images/unforgiven.png" draggable="false">
-                            <img class="image5"img src="images/Backfromtheedge.jpg" draggable="false">
-                            <img class="image6"img src="images/blonde.jpeg"draggable="false">
-                            <img class="image7"img src="images/Lilac.png" draggable="false">
-                            <img class="image8"img src="images/astroworld.jpg" draggable="false">
-                            <img class="image9"img src="images/legendsnverdie.png" draggable="false">
+                            <img class="image"img src="images/utopia3.jpeg" draggable="false">
+                    <img class="image"img src="images/palette3.jpg" draggable="false">
+                    <img class="image"img src="images/unforgiven2.jpeg" draggable="false">
+                    <img class="image"img src="images/jamesarthur2.jpg" draggable="false">
+                    <img class="image"img src="images/blond.webp"draggable="false">
+                    <img class="image"img src="images/lilac2.jpeg" draggable="false">
+                    <img class="image"img src="images/astroworld2.jpeg" draggable="false">
+                    <img class="image"img src="images/takemehome.jpeg" draggable="false">
+                    <img class="image"img src="images/heroesvillians.jpeg" draggable="false">
+                    <img class="image"img src="images/getup.jpeg" draggable="false">
+                    <img class="image"img src="images/unorthodox.jpeg" draggable="false">
+                    <img class="image"img src="images/borntobe.jpg" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -79,14 +82,8 @@
         </div>
 </section>
     <!--Top 4 Groups/Solosists-->
-<section>
+<section class="me">
     <div class="container">
-        <div class="top4">
-            <h1>My Top 4</h1>
-            <p>groups/soloists that i would die for.</p>
-            <a href="groups.html" class="btn button1">Groups <span>⊹˚.⋆</span></a>
-            <a href="soloists.html" class="btn button2">Soloists <span>⊹˚.♡</span></a>
-        </div>
         <div class="gallery">
             <div class="img-box"><h3>IU</h3></div>
             <div class="img-box"><h3>ITZY</h3></div>
@@ -97,7 +94,7 @@
 </section>
 
 
-    <!--Javascript for Track Menu-->
+    <!--Javascript for Mouse Menu-->
 
     <script>
         const cursorOutline = document.querySelector("[data-cursor-outline]");
@@ -116,17 +113,6 @@
     
 
 
-    <!--Javascript for Toggle Menu-->
-<script>
-
-    var navLinks = document.getElementById("navlinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-</script>
     <!--Javascript for Track Menu-->
 <script>
     const track = document.getElementById("image-track");
@@ -205,7 +191,7 @@ const typeEffect = () => {
     }
 }
 typeEffect();
-</script>]
+</script>
 
 
 
