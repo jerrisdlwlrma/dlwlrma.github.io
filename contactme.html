@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get in contact</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Nanum+Pen+Script&family=Rubik:wght@300;400;500;600;700;800;900&family=Single+Day&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d4feed905e.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="images/logofinal2.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <main>
+        <div class="text">
+            <div class="line">
+                <p class="word">Jerric</p>
+                <p class="word">would love</p>
+            </div>
+            <div class="line">
+                <p class="word">to Get TO</p>
+                <p class="word">know</p>
+            </div>
+            <div class="line">
+                <p class="word">you better.</p>
+                <p class="word">:)</p>
+            </div>
+            <div class="line">
+                <p class="word">discord---</p>
+                <a id= "channel-link" class="word fancy" href="https://discordapp.com/users/558442568975646721" target="blank">@je._rr.ic</a>
+            </div>
+            <div class="line">
+                <a id= "channel-link2" class="word fancy" href="https://www.instagram.com/je._rr.ic/" target="blank">->Instagram</a>
+                <a id= "channel-link3" class="word fancy" href="mailto:jerricdesigns@gmail.com">->Email</a>
+        </div>
+    </div>
+    </main>
+    <footer class="footer_component footer_home">
+        <div class="page-padding">
+            <div class="container">
+                <div class="footer-content-wrapper">
+                    <div id="w-node-f236de14-d9ae-24cd-5ae2-070088cb2685-88cb2680" class="footer-item-wrapper">
+                        <a href="mailto:jerricdesigns@gmail.com" class="footer-link-item apply-fg-color w-inline-block">
+                        -> jerric.designs@gmail.com</a>
+                    <div class="footer-link-item apply-fg-color">
+                        <a href="https://discordapp.com/users/558442568975646721" target="blank" class="footer-link-item apply-fg-color w-inline-block">
+                        -> discord
+                        </a>
+                    </div>
+                </div>
+                    <div id="w-node-f236de14-d9ae-24cd-5ae2-070088cb268d-88cb2680" class="footer-item-wrapper">
+                        <a href="https://www.instagram.com/je._rr.ic/" target="blank" class="footer-link-item apply-fg-color w-inline-block">
+                            -> instagram</a>
+                            <div class="footer-link-item apply-fg-color">
+                        <a href="index.html" class="footer-link-item apply-fg-color w-inline-block"> -> Home 
+                                </a>
+                    </div>
+                    </div>
+                    <div id="w-node-f236de14-d9ae-24cd-5ae2-070088cb2694-88cb2680" class="footer-item-wrapper">
+                        <div class="footer-copyright-item apply-fg-color text-small">
+                            <div class="footer-copyright-text">
+                                © Jerric 2023
+                            </div>
+                        </div>    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+    window.addEventListener("mousemove", function (e) {
+
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, {duration: 500, fill: "forwards"})
+        });
+</script>
+<script>
+
+const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((letter) => {
+    const span = document.createElement("span");
+    
+    span.className = "letter";
+
+    span.innerText = letter;
+
+    element.appendChild(span);
+    
+  });
+}
+
+enhance("channel-link");
+</script>
+<script>
+
+    const enhance2 = id => {
+      const element = document.getElementById(id),
+            text = element.innerText.split("");
+      
+      element.innerText = "";
+      
+      text.forEach((letter) => {
+        const span = document.createElement("span");
+        
+        span.className = "letter";
+    
+        span.innerText = letter;
+    
+        element.appendChild(span);
+        
+      });
+    }
+    
+    enhance2("channel-link2");
+    </script>
+
+<script>
+
+    const enhance3 = id => {
+      const element = document.getElementById(id),
+            text = element.innerText.split("");
+      
+      element.innerText = "";
+      
+      text.forEach((letter) => {
+        const span = document.createElement("span");
+        
+        span.className = "letter";
+    
+        span.innerText = letter;
+    
+        element.appendChild(span);
+        
+      });
+    }
+    
+    enhance3("channel-link3");
+    </script>
+<script> ScrollReveal({ reset: false, duration: 2500 , delay:400, distance: '60px' })
+    ScrollReveal().reveal('.text', { delay: 100, origin: 'bottom', enter: 'top'});
+    ScrollReveal().reveal('.footer-content-wrapper', { delay: 100, origin: 'bottom', enter: 'top'});
+    </script>
+</html>

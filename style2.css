@@ -1,0 +1,250 @@
+*{margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Rubik', sans-serif;
+font-family: 'Single Day', cursive;
+font-family: 'Lora', serif;
+font-family: 'GeneralSans';
+box-sizing:border-box
+}
+@font-face {
+    font-family: 'Kyiv Sans';
+    src: url(fonts/kyivtypesans.woff2) format('woff2-variations');
+    font-weight: 0 1000;
+}
+@font-face {
+    font-family: 'GeneralSans';
+    src: url(fonts/GeneralSans-Variable.woff2) format('woff2-variations');
+    font-weight: 0 1000;
+}
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url(fonts/CabinetGrotesk-Variable.woff2) format('woff2-variations');
+    font-weight: 0 1000;
+}
+@font-face {
+    font-family: 'GeneralSansBold';
+    src: url(fonts/GeneralSans-Bold.otf) format('otf'); 
+}
+@font-face {
+    font-family: 'Satoshi';
+    src: url(fonts/Satoshi-Variable.ttf) format('ttf-variations');
+    font-weight: 0 1000;
+}
+@font-face {
+    font-family: 'PorticoNormal';
+    src: url(fonts/Portico\ Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'PorticoOutline';
+    src: url(fonts/Portico\ Outline.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'MabryPro';
+    src: url(fonts/MabryPro-Regular.woff2) format('woff2');
+}
+body {
+    height: 100vh;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: 200px 0;
+  }
+
+  .cursor-outline {
+    width:40px;
+    height: 40px;
+    border: 2px solid rgb(156, 150, 150);
+    position: fixed;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index:220;
+    pointer-events: none;
+}
+
+.text p,a {
+    color: white;
+    text-transform: uppercase;
+    margin:0rem;
+    font-size: 5em;
+    font-family: 'MabryPro';
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top:0;
+    margin-bottom: 0;
+    text-decoration: none;
+    transition: opacity 250ms ease;
+}
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: 0.2;
+  }
+
+  .fancy > .letter {
+    display: inline-block;
+    transition: transform 350ms ease;
+  }
+
+  .fancy:hover > .letter {
+    transition-duration: 800ms;
+  }
+  
+  .fancy:hover > .letter:nth-child(1) {
+    transform: translate(-30%, 60%) rotate(8deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(2) {
+    transform: translate(-40%, 20%) rotate(4deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(3) {
+    transform: translate(-10%, 50%) rotate(-6deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(4) {
+    transform: translate(0%, 50%) rotate(-8deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(5) {
+    transform: translate(30%, 30%) rotate(5deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(6) {
+    transform: translate(0%, 20%) rotate(-3deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(7) {
+    transform: translate(0%, -20%) rotate(-5deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(8) {
+    transform: translate(20%, 1%) rotate(10deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(9) {
+    transform: translate(20%, -30%) rotate(8deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(10) {
+    transform: translate(0%, 15%) rotate(-6deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(11) {
+    transform: translate(50%, -10%) rotate(-3deg);
+  }
+  
+  .fancy:hover > .letter:nth-child(12) {
+    transform: translate(120%, -30%) rotate(-10deg);
+  }
+
+  @keyframes float {
+    from, to {
+      transform: translateY(-0%);
+    }
+    
+    50% {    
+      transform: translateY(-3%);
+    }
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 1000% center;
+    }
+    
+    to {
+      background-position: 0% center;
+    }
+  }
+  .page-padding {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.footer_component.footer_home {
+    color: var(--off-white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer_component {
+    pointer-events: none;
+}
+.footer_component {
+    z-index: 50;
+    margin-top: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+}
+footer{
+    display: block;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 2560px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.footer-content-wrapper {
+    width: 100%;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+#w-node-f236de14-d9ae-24cd-5ae2-070088cb2685-88cb2680, #w-node-f236de14-d9ae-24cd-5ae2-070088cb268d-88cb2680{
+    grid-area: span 1/span 1/span 1/span 1;
+}
+.footer-link-item, .footer-copyright-item {
+    pointer-events: auto;
+}
+.footer-copyright-item {
+    text-align: right;
+}
+.footer-link-item {
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity .25s;
+    display: block;
+}
+.apply-fg-color {
+    transition: color 1s;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+footer a {
+    color: white;
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 100;
+    font-family: 'MabryPro';
+}
+
+footer a:hover{
+    color: gray;
+}
+#w-node-f236de14-d9ae-24cd-5ae2-070088cb2694-88cb2680 {
+    grid-area: span 1/span 2/span 1/span 2;
+    align-self: end;
+}
+.text-small {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
