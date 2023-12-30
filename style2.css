@@ -248,3 +248,61 @@ footer a:hover{
     font-weight: 400;
     line-height: 1.5;
 }
+
+#btn {
+    border: 2px solid white;
+    position: absolute;
+    color:white;
+    border-radius: 100%;
+    width:100px;
+    height:100px;
+    top:100px;
+    right:100px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+#btn a{
+    font-size: 1rem;
+    transition: 1s;
+}
+
+#btn:hover{
+    background-color: white;
+}
+
+#btn:hover a{
+    color: black;
+}
+
+@media(max-width:700px){
+    .text p,a {
+        color: white;
+        text-transform: uppercase;
+        margin:0rem;
+        font-size: 2em;
+        font-family: 'MabryPro';
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top:0;
+        margin-bottom: 0;
+        text-decoration: none;
+        transition: opacity 250ms ease;
+    }
+
+    #btn {
+        border: 2px solid white;
+        position: absolute;
+        color:white;
+        border-radius: 100%;
+        width:100px;
+        height:100px;
+        top:50px;
+        right:130px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+    
+}
