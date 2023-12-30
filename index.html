@@ -12,11 +12,12 @@
     <link rel="icon" type="image/png" href="images/logofinal2.png">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+<div id="blob"></div>
 <body>
     <div class="cursor-outline" data-cursor-outline></div>
-
     <div class="item item-1">This website is 100% coded by je._rr.ic and is currently a work in progress! Thank you for visiting!</div>
     <!--Header-->
+    <main>
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/logo5ed.png" id="logo"  alt="logo"></a>
@@ -32,7 +33,7 @@
             </div>
         </nav>
     
-        <div class="container">
+        <div class="container2">
             <div class="name1" id="title">
                 <h1>JERRIC</h1>
             </div> 
@@ -81,17 +82,115 @@
             </div>
         </div>
 </section>
-    <!--Top 4 Groups/Solosists-->
-<section class="me">
+<section class="whoamI">
     <div class="container">
-        <div class="gallery">
-            <div class="img-box"><h3>IU</h3></div>
-            <div class="img-box"><h3>ITZY</h3></div>
-            <div class="img-box"><h3>SEJEONG</h3></div>
-            <div class="img-box"><h3>LE SSERAFIM</h3></div>
+        <div class="even-columns">
+            <div class="hacked">
+                <h1 data-value="About Me" style="font-family: 'GeneralSans'; font-weight: 300; font-size: 6.854rem;">About Me</h1>
+            </div>
+            <div class="card">
+                <img src="images/jerric1.jpeg">
+            </div>
+            <div class="flow thisistext">
+                <p>Hello my name's Jerric, I'm a male student born in Singapore currently attending Junior College, who loves travelling and food. I'm currently studying to be a lawyer or journalist but got fixated on web development along the way so, here I am.
+                    <br> <br> <br>Alternatively I spend most of my free time hopping online for a game of Overwatch, hunting for the best kimchi fried rice out there, or jamming away to "My Eyes" by Travis Scott. <br></p>
+                <a href="aboutme.html"><button style="margin-top: 1em;" class="button">more about me<span>ツ</span></button></a><hr>
+            </div>
         </div>
     </div>
 </section>
+    <!--Top 4 Groups/Solosists-->
+<section class="mytop4 padding-block-900">
+    <div class="container">
+        <div class="threecolumns">
+            <div class="musicbutton">
+                <a href="music.html"><button class="button2" style="margin-top: 200px; rotate: -15deg; margin-left: 40px;">Music</button></a>
+            </div>
+            <div class="gallery card">
+                <div class="img-box"><h3>IU</h3></div>
+                <div class="img-box"><h3>ITZY</h3></div>
+                <div class="img-box"><h3>SEJEONG</h3></div>
+                <div class="img-box"><h3>LE SSERAFIM</h3></div>
+            </div>
+            <div class="topartist">
+                <h2 style="font-family: 'GeneralSans'; font-weight: 300; font-size: 4.236rem;">TOP ARTISTS</h2>
+                <p>groups/soloists I would die for.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel padding-block-900">
+        <h1 class="I">I am A</h1>
+        <!-- Carousel -->
+        <button class="button">Music Is Everything</button>
+</section>
+
+<section class="blog padding-block-900">
+    <div class="container">
+        <div class="even-columns">
+            <div>
+                <p>Get to know where i've been.</p>
+            </div>
+            <div>
+                <button class="button">Travel Album</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vid padding-block-900">
+    <div class="container">
+    <div class="even-columns">
+        <div>
+            <video source scr="" type="audio/" autoplay muted loop></video>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, exercitationem minima? Consequuntur nemo magni maxime temporibus inventore omnis laborum ad sint ipsam at quis facere quo tenetur, accusamus corporis alias.</p>
+        </div>
+    </div>  
+</div>
+</section>
+<section class="contactme padding-block-900">
+    <div class="container">
+    <div class="even-columns">
+        <div>
+        <a href="contactme.html"><h1>Get to know me</h1></a>
+        </div>
+        <div>
+            <h1>About Me</h1>
+            <h1>Music</h1>
+            <h1>Photoalbum</h1>
+            <h1>Stream</h1>
+            <h1>back to top</h1>
+            <!-- icons -->
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<footer class="theend padding-block-600">
+    <div class="container">
+        <div class="even-columns">
+            <div>
+                <a href="index.html"><img src="images/logofinal2.png"></a>
+                <ul role="list" aria-label="social links">
+                    <li><a aria-label="instagram" href="https://www.instagram.com/je._rr.ic/"></a></li>
+                    <li><a aria-label="email" href="mailto:jerricdesigns@gmail.com"></a></li>
+                    <li><a aria-label="discord" href="https://discordapp.com/users/558442568975646721"></a></li>  
+                </ul>
+            </div>
+            <div>
+                <p>thank you for visiting my website.</p>
+            </div>
+            <div>
+                <p>© Je._rr.ic 2023</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
 
 
     <!--Javascript for Mouse Menu-->
@@ -111,7 +210,20 @@
             });
     </script>
     
+<script>
+    /* -- Glow effect -- */
 
+const blob = document.getElementById("blob");
+
+window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+</script>
 
     <!--Javascript for Track Menu-->
 <script>
@@ -193,12 +305,47 @@ const typeEffect = () => {
 typeEffect();
 </script>
 
+    <!--Hacked text effect-->
+<script>
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+let interval = null;
+
+document.querySelector("div.hacked h1").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}
+</script>
 
 <script> ScrollReveal({ reset: false, duration: 2500 , delay:400, distance: '60px' })
 ScrollReveal().reveal('.navlinks', { delay: 100, origin: 'top', enter: 'top'});
 ScrollReveal().reveal('#logo', { delay: 100, origin: 'top' });
 ScrollReveal().reveal('#image-track', { delay: 300, origin: 'right' });
+ScrollReveal().reveal('.card', { delay: 100, origin: 'bottom' });
+ScrollReveal().reveal('.thisistext', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.hacked', { delay: 100, origin: 'left' });
+ScrollReveal().reveal('.musicbutton', { delay: 100, origin: 'left' });
+ScrollReveal().reveal('.topartist', { delay: 100, origin: 'top' });
 ScrollReveal().reveal('.gallery', { delay: 100, origin: 'bottom', scale: '0.8' });
 </script>
 </body>
