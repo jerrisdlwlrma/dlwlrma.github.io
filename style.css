@@ -7,7 +7,10 @@ font-family: 'Single Day', cursive;
 font-family: 'Lora', serif;
 overflow-x: hidden;
 font-family: 'GeneralSans';
-box-sizing:border-box
+box-sizing:border-box;
+font: inherit;
+color: white;
+background: transparent;
 }
 @font-face {
     font-family: 'Kyiv Sans';
@@ -41,15 +44,46 @@ box-sizing:border-box
     font-family: 'PorticoOutline';
     src: url(fonts/Portico\ Outline.woff2) format('woff2');
 }
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: black;
+body::-webkit-scrollbar{
+    width:0.25rem;
 }
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  
+  #blob {
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: rotate 20s infinite;
+    opacity: 0.6;
+    z-index: 0;
+    filter: blur(500px);
+  }
+
 .cursor-outline {
     width:40px;
     height: 40px;
@@ -57,6 +91,7 @@ box-sizing:border-box
     position: fixed;
     top:0;
     left:0;
+    background: transparent;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index:220;
@@ -66,7 +101,7 @@ box-sizing:border-box
 .header{
     min-height: 100vh;
     width: 100%;
-    background-color: black;
+    background: transparent;
     background-position: center;
     background-size: cover;
     position:relative;
@@ -88,6 +123,7 @@ box-sizing:border-box
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 nav{
     display: flex;
@@ -157,7 +193,6 @@ nav .navlinks ul {
 .album{
     min-height: 100vh;
     width: 100%;
-    background-color:black;
     background-position: center;
     background-size: cover;
     position:absolute;
@@ -180,6 +215,7 @@ nav .navlinks ul {
     object-fit: cover;
     object-position: 100% center;
   } 
+
 
   .albumhp{
     width:0px;
@@ -221,6 +257,7 @@ nav .navlinks ul {
     font-size: 11.089rem;
     transition: 1s;
     animation: slideInRight 2.5s ease;
+    background-color: transparent;
 }
 
 @keyframes slideInRight {
@@ -266,12 +303,14 @@ nav .navlinks ul {
     font-size: 1.618rem;
     overflow-y: hidden;
     animation: slideInRight 2.5s ease;
+    background-color: transparent;
 }
 
 .name2 h1 span{
     position: relative;
     color: #ffffff;
     font-size: 2.618rem;
+    background-color: transparent;
 }
 
 .name2 h1 span::before{
@@ -297,6 +336,7 @@ nav .navlinks ul {
     top:145px;
     left: 31px;
     animation: slideInLeft 2.5s ease;
+    background-color: transparent;
 }
 
 .name5 h1{
@@ -307,9 +347,10 @@ nav .navlinks ul {
     font-family: 'Cabinet Grotesk';
     font-weight: 150;
     font-size: 1rem;
-    bottom:220px;
+    bottom: 220px;
     right: 15px;
     animation: slideInRight 2.5s ease;
+    background: transparent;
 }
 
 @media(max-width: 700px){
@@ -612,6 +653,8 @@ nav .navlinks ul {
     left: 30px;
     opacity:0;
     transition: bottom 0.5s, opacity 0.5s;
+    font-family: 'Cabinet Grotesk';
+    font-weight: 500;
 }
 .img-box:hover{
     width: 500px;
@@ -622,22 +665,7 @@ nav .navlinks ul {
     opacity: 1;
     bottom: 25px;
 }
-.btn{
-    width:200px;
-    height:60px;
-    color:black ;
-    background:#3a3939;
-    font-size:30px;
-    font-weight:600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin-bottom:20px;
-    position: absolute;
-    top:10px;
-    margin-left:-20px;
-}
+
 
 @media(max-width: 700px){
     html, body{
@@ -705,3 +733,161 @@ nav .navlinks ul {
         margin:10px;
     }
   }
+
+
+:root{
+--size-100: .25rem;
+--size-200: .5rem;
+--size-300: .75rem;
+--size-400: 1rem;
+--size-500: 1.5rem;
+--size-600: 2rem;
+--size-700: 3rem;
+--size-800: 4rem;
+--size-900: 5rem;
+}
+.padding-block-900{
+    padding-block: var(--size-900);
+}
+
+.padding-block-600{
+    padding-block: var(--size-600);
+}
+
+.container{
+    --max-width: 1110px;
+    padding: 60px;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+    z-index: 3;
+    background: transparent;
+}
+
+.even-columns{
+    display:grid;
+    gap: 1rem;
+    overflow-y: hidden;
+    z-index: 3;
+    background: transparent;
+}
+
+.threecolumns{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr;
+}
+
+.flow * + * {
+    margin-top: 2em;
+}
+
+@media (min-width: 50em){
+    .even-columns{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.button{
+    cursor: pointer;
+    border-radius: 100vmax;
+    padding: 1em 1.75em;
+    background-color: black;
+    font-family: 'Cabinet Grotesk' ;
+    font-weight: 400;
+    font-size: 1rem;
+    border-color: white;
+    border-style: solid;
+    transition: 1s;
+}
+
+
+.button:hover, .button:focus-visible {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+.button2{
+    border: 2px solid white;
+    color:white;
+    border-radius: 100%;
+    width:200px;
+    height:200px;
+    font-family: 'Cabinet Grotesk' ;
+    font-weight: 400;
+    font-size: 1.618rem;
+    transition: 1s;
+}
+
+.button2:hover, .button2:focus-visible {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+.whoamI p{
+    font-family: 'Cabinet Grotesk';
+    margin-top: 480px;
+    background: transparent;
+}
+
+.whoamI{
+    background: transparent;
+}
+.card{
+    background-color: rgba(50, 50, 50, 0.2);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-right: 20px;
+}
+
+.card img{
+    object-position: center;
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 50px;
+}
+
+.thisistext{
+    background: transparent;
+}
+
+.hacked{
+    background: transparent;
+}
+
+body{
+    background-color: black;
+}
+
+.button span{
+    margin-left: 5px;
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    display: none;
+    color: black;
+}
+
+.button:hover span{
+    display: inline;
+}
+
+.topartist h2{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.topartist p{
+    margin-top: -10px;
+    margin-left: 230px;
+    font-family: 'Cabinet Grotesk';
+    font-weight:200;
+}
